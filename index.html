@@ -67,9 +67,18 @@ Bank loan rates are pegged to volatile SIBOR
 What if we helped Singapore Joe <b>predict SIBOR for his loan</b>?
 </h4>
 
-<p><br><br><br><br></p>
+<p><br></p>
 
-<p style='font-style: italic; font-size=1px'>* SIBOR = Singapore Interbank Offer Rates</p>
+<p style='font-style: italic; font-size: 12px'>
+<b>R Code to Generate Chart</b>
+<br>
+
+```r
+library(ggplot2)
+   ggplot(sibor, aes(x=Date, y=X1.mth)) + xlab('Months & Years') + ylab('1-month Sibor Value') 
+   + geom_line(colour="red", size=1) + scale_colour_hue(h=c(0, 90)) + guides(fill=FALSE)
+```
+<br><br>* SIBOR = Singapore Interbank Offer Rates</p>
 
   </article>
   <!-- Presenter Notes -->
